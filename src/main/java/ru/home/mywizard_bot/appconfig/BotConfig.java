@@ -27,16 +27,71 @@ public class BotConfig {
     public MyWizardTelegramBot MySuperTelegramBot() {
         DefaultBotOptions options = ApiContext
                 .getInstance(DefaultBotOptions.class);
+        System.out.println("MySuperTelegramBot() started");
 
-        options.setProxyHost(proxyHost);
-        options.setProxyPort(proxyPort);
-        options.setProxyType(proxyType);
+//        options.setProxyHost(proxyHost);
+//        options.setProxyPort(proxyPort);
+//        options.setProxyType(proxyType);
 
         MyWizardTelegramBot mySuperTelegramBot = new MyWizardTelegramBot(options);
         mySuperTelegramBot.setBotUserName(botUserName);
         mySuperTelegramBot.setBotToken(botToken);
         mySuperTelegramBot.setWebHookPath(webHookPath);
+        System.out.println("webHookPath = " + webHookPath);
+        System.out.println("botUserName = " + botUserName);
+        System.out.println("botToken = " + botToken);
+        System.out.println("proxyHost = " + proxyHost);
+        System.out.println("proxyPort = " + proxyPort);
+        System.out.println("proxyType = " + proxyType);
 
         return mySuperTelegramBot;
     }
+
+	public String getWebHookPath() {
+		return webHookPath;
+	}
+
+	public void setWebHookPath(String webHookPath) {
+		this.webHookPath = webHookPath;
+	}
+
+	public String getBotUserName() {
+		return botUserName;
+	}
+
+	public void setBotUserName(String botUserName) {
+		this.botUserName = botUserName;
+	}
+
+	public String getBotToken() {
+		return botToken;
+	}
+
+	public void setBotToken(String botToken) {
+		this.botToken = botToken;
+	}
+
+	public DefaultBotOptions.ProxyType getProxyType() {
+		return proxyType;
+	}
+
+	public void setProxyType(DefaultBotOptions.ProxyType proxyType) {
+		this.proxyType = proxyType;
+	}
+
+	public String getProxyHost() {
+		return proxyHost;
+	}
+
+	public void setProxyHost(String proxyHost) {
+		this.proxyHost = proxyHost;
+	}
+
+	public int getProxyPort() {
+		return proxyPort;
+	}
+
+	public void setProxyPort(int proxyPort) {
+		this.proxyPort = proxyPort;
+	}
 }
