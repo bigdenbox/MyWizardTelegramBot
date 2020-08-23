@@ -1,4 +1,4 @@
-package ru.home.mywizard_bot;
+package src.main.java.ru.home.mywizard_bot;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
