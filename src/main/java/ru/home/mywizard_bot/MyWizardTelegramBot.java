@@ -2,7 +2,6 @@ package ru.home.mywizard_bot;
 
 import java.util.Date;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.telegram.telegrambots.bots.DefaultBotOptions;
 import org.telegram.telegrambots.bots.TelegramWebhookBot;
 import org.telegram.telegrambots.meta.api.methods.BotApiMethod;
@@ -18,7 +17,6 @@ public class MyWizardTelegramBot extends TelegramWebhookBot {
 
 	public MyWizardTelegramBot(DefaultBotOptions botOptions) {
 		super(botOptions);
-//		super(new DefaultBotOptions());
 		System.out.println("Constructor MyWizardTelegramBot(DefaultBotOptions botOptions) is started");
 		System.out.println("botOptions.getProxyHost(): " + botOptions.getProxyHost());
 		System.out.println("botOptions.getBaseUrl(): " + botOptions.getBaseUrl());
